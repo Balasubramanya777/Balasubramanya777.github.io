@@ -1,1 +1,138 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N. Balasubramanya | Full-Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav" id="nav">
+            <div class="nav-brand">NBS</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="assets/images/profile.jpg" alt="N. Balasubramanya" class="hero-img">
+            <h1>N. Balasubramanya</h1>
+            <h2>Full-Stack Developer</h2>
+            <p>Versatile developer crafting scalable web solutions with modern tech stacks, from frontend UIs to cloud-backed APIs. Passionate about clean code and innovative low-code platforms.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Experienced full-stack developer specializing in enterprise-grade applications using .NET, Spring Boot, React, and Angular. Proficient in cloud platforms like Azure and AWS, with hands-on expertise in low-code tools like Power Apps for rapid development. Committed to delivering performant, scalable solutions in Bengaluru.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-icons">
+                    <img src="assets/icons/csharp.svg" alt="C#" title="C#">
+                    <img src="assets/icons/java.svg" alt="Java" title="Java">
+                    <img src="assets/icons/javascript.svg" alt="JavaScript" title="JavaScript">
+                    <img src="assets/icons/typescript.svg" alt="TypeScript" title="TypeScript">
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frontend</h3>
+                <div class="skill-icons">
+                    <img src="assets/icons/react.svg" alt="React" title="React">
+                    <img src="assets/icons/angular.svg" alt="Angular" title="Angular">
+                    <img src="assets/icons/html.svg" alt="HTML" title="HTML">
+                    <img src="assets/icons/css.svg" alt="CSS" title="CSS">
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend & DB</h3>
+                <div class="skill-icons">
+                    <img src="assets/icons/dotnet.svg" alt=".NET" title=".NET">
+                    <img src="assets/icons/springboot.svg" alt="Spring Boot" title="Spring Boot">
+                    <img src="assets/icons/postgresql.svg" alt="PostgreSQL" title="PostgreSQL">
+                    <img src="assets/icons/mysql.svg" alt="MySQL" title="MySQL">
+                    <img src="assets/icons/dataverse.svg" alt="Dataverse" title="Dataverse">
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Cloud</h3>
+                <div class="skill-icons">
+                    <img src="assets/icons/eclipse.svg" alt="Eclipse" title="Eclipse">
+                    <img src="assets/icons/visualstudio.svg" alt="Visual Studio" title="Visual Studio">
+                    <img src="assets/icons/postman.svg" alt="Postman" title="Postman">
+                    <img src="assets/icons/jira.svg" alt="Jira" title="Jira">
+                    <img src="assets/icons/azuredevops.svg" alt="Azure DevOps" title="Azure DevOps">
+                    <img src="assets/icons/azure.svg" alt="Azure" title="Azure">
+                    <img src="assets/icons/aws.svg" alt="AWS" title="AWS">
+                    <img src="assets/icons/powerapps.svg" alt="Power Apps" title="Power Apps">
+                    <img src="assets/icons/powerpages.svg" alt="Power Pages" title="Power Pages">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Add your projects here; each links to separate page e.g., project1.html -->
+            <div class="project-card">
+                <img src="assets/images/project1-thumb.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Brief description. Click to view details.</p>
+                <a href="project1.html" class="btn">View Details</a>
+            </div>
+            <div class="project-card">
+                <img src="assets/images/project2-thumb.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Brief description. Click to view details.</p>
+                <a href="project2.html" class="btn">View Details</a>
+            </div>
+            <!-- Repeat for more; up to 6 -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="mailto:your.email@example.com">📧 Email</a>
+            <a href="https://wa.me/yourwhatsapp">📱 WhatsApp</a>
+            <a href="https://instagram.com/yourhandle">📸 Instagram</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 N. Balasubramanya. Built with HTML, CSS & JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
