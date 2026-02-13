@@ -45,15 +45,13 @@ body {
 .nav {
     display: flex;
     justify-content: center;
-    /* Centers the nav-menu */
     align-items: center;
     padding: 1rem 5%;
     position: relative;
-    /* NEW: Container for absolute positioning */
 }
 
 .nav-brand {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     font-weight: 700;
     background: var(--accent);
     -webkit-background-clip: text;
@@ -63,7 +61,7 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: clamp(1rem, 3vw, 2rem);
 }
 
 .nav-menu a {
@@ -71,26 +69,41 @@ body {
     color: var(--text-primary);
     font-weight: 500;
     transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
 }
 
 .nav-menu a:hover {
     color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
 }
 
 .hamburger {
-    position: absolute;
-    right: 5rem;
-    /* NEW: Positions hamburger left of theme toggle */
-    top: 50%;
-    transform: translateY(-50%);
-    /* NEW: Vertically centers it */
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 .hamburger span {
-    width: 25px;
+    width: clamp(20px, 5vw, 25px);
     height: 3px;
     background: var(--text-primary);
     transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -5px);
 }
 
 .theme-toggle {
@@ -101,14 +114,7 @@ body {
     padding: 0.5rem;
     border-radius: 50%;
     transition: 0.3s;
-    position: absolute;
-    /* NEW: Positions on right */
-    right: 1.5rem;
-    /* NEW: Right side */
-    top: 50%;
-    /* NEW: Vertical center */
-    transform: translateY(-50%);
-    /* NEW: Perfect vertical centering */
+    margin-left: 1rem;
 }
 
 .hero {
@@ -117,13 +123,13 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 5%;
+    padding: 0 clamp(1rem, 5vw, 5%);
     background: var(--accent);
     color: white;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem !important;
+    font-size: clamp(1.2rem, 4vw, 1.5rem) !important;
     margin-bottom: 1rem !important;
     color: white !important;
     opacity: 0.9 !important;
@@ -133,21 +139,21 @@ body {
 }
 
 .section-title {
-    font-size: 2.5rem !important;
+    font-size: clamp(2rem, 6vw, 2.5rem) !important;
     text-align: center !important;
-    margin-bottom: 3rem !important;
+    margin-bottom: clamp(2rem, 5vw, 3rem) !important;
     background: var(--accent) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: clamp(500px, 90vw, 800px);
 }
 
 .hero-img {
-    width: 200px;
-    height: 200px;
+    width: clamp(140px, 30vw, 200px);
+    height: clamp(140px, 30vw, 200px);
     border-radius: 50%;
     margin-bottom: 1rem;
     object-fit: cover;
@@ -155,25 +161,27 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     margin-bottom: 2rem;
     max-width: 600px;
+    padding: 0 clamp(1rem, 5vw, 2rem);
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: clamp(10px, 2.5vw, 12px) clamp(20px, 4vw, 30px);
     border-radius: var(--radius);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s;
-    margin: 0 1rem;
+    margin: 0 clamp(0.5rem, 2vw, 1rem);
+    white-space: nowrap;
 }
 
 .btn-primary {
@@ -199,47 +207,43 @@ body {
 }
 
 section {
-    padding: 100px 5%;
+    padding: clamp(80px, 12vw, 100px) clamp(20px, 8vw, 5%);
     max-width: 1200px;
     margin: 0 auto;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
     background: var(--accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .about {
-    /* background: var(--bg-secondary);
-    border-radius: var(--radius);
-    padding: 3rem;
-    box-shadow: var(--shadow); */
     text-align: center;
-    max-width: 800px;
+    max-width: clamp(600px, 90vw, 800px);
     margin: 0 auto;
 }
 
 .about p {
     background: var(--bg-secondary);
     border-radius: var(--radius);
-    padding: 3rem;
+    padding: clamp(2rem, 5vw, 3rem);
     box-shadow: var(--shadow);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 45vw, 300px), 1fr));
+    gap: clamp(1.5rem, 4vw, 2rem);
 }
 
 .skill-category {
     background: var(--bg-secondary);
-    padding: 2rem;
+    padding: clamp(1.5rem, 4vw, 2rem);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     text-align: center;
@@ -248,18 +252,19 @@ h2 {
 .skill-category h3 {
     margin-bottom: 1rem;
     color: var(--text-primary);
+    font-size: clamp(1.1rem, 3vw, 1.2rem);
 }
 
 .skill-icons {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: clamp(0.8rem, 3vw, 1rem);
     justify-content: center;
 }
 
 .skill-icons img {
-    width: 50px;
-    height: 50px;
+    width: clamp(35px, 8vw, 50px);
+    height: clamp(35px, 8vw, 50px);
     filter: grayscale(0.3);
     transition: 0.3s;
 }
@@ -271,8 +276,8 @@ h2 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 90vw, 350px), 1fr));
+    gap: clamp(1.5rem, 4vw, 2rem);
 }
 
 .project-card {
@@ -289,13 +294,13 @@ h2 {
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: clamp(180px, 25vw, 200px);
     object-fit: cover;
 }
 
 .project-card h3 {
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
 }
 
 .project-card p {
@@ -313,7 +318,7 @@ h2 {
     text-align: center;
     background: var(--bg-secondary);
     border-radius: var(--radius);
-    padding: 3rem;
+    padding: clamp(2rem, 5vw, 3rem);
     box-shadow: var(--shadow);
 }
 
@@ -358,51 +363,107 @@ h2 {
 
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: clamp(1.5rem, 4vw, 2rem);
     background: var(--bg-secondary);
     color: var(--text-secondary);
 }
 
-/* Responsive */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .hamburger {
-        right: 1rem;
-        /* Hamburger closest to edge on mobile */
+    .nav {
+        justify-content: space-between;
+        padding: clamp(0.8rem, 3vw, 1rem) clamp(1rem, 5vw, 5%);
     }
-
-    .theme-toggle {
-        right: 4rem;
-        /* Theme toggle next to hamburger */
-    }
-
+    
     .nav-menu {
         position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: var(--bg-secondary);
-        width: 100%;
-        text-align: center;
-        padding: 2rem 0;
-        transition: 0.3s;
-        box-shadow: var(--shadow);
-    }
-
-    .nav-menu.active {
+        top: 0;
         left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        padding: 0;
+        margin: 0;
+        z-index: 999;
+        backdrop-filter: blur(10px);
     }
-
-    .hero h1 {
-        font-size: 2.5rem;
+    
+    .nav-menu.active {
+        transform: translateX(0);
     }
-
-    section {
-        padding: 80px 5%;
+    
+    .nav-menu li {
+        opacity: 0;
+        transform: translateX(30px);
+        animation: slideIn 0.3s ease forwards;
     }
-
-    .skill-icons img {
-        width: 40px;
-        height: 40px;
+    
+    .nav-menu li:nth-child(1) { animation-delay: 0.1s; }
+    .nav-menu li:nth-child(2) { animation-delay: 0.2s; }
+    .nav-menu li:nth-child(3) { animation-delay: 0.3s; }
+    .nav-menu li:nth-child(4) { animation-delay: 0.4s; }
+    .nav-menu li:nth-child(5) { animation-delay: 0.5s; }
+    .nav-menu li:nth-child(6) { animation-delay: 0.6s; }
+    
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .nav-menu a {
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+        padding: clamp(1rem, 3vw, 1.5rem) clamp(2rem, 6vw, 3rem);
+        display: block;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        display: block;
+        margin: 0.5rem auto;
+    }
+    
+    .timeline::before {
+        left: clamp(20px, 6vw, 30px);
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding: 2rem clamp(70px, 15vw, 90px) 2rem clamp(1rem, 4vw, 2rem) !important;
+    }
+    
+    .timeline-item.right {
+        left: 0 !important;
+    }
+    
+    .timeline-icon {
+        left: clamp(15px, 5vw, 25px) !important;
+    }
+    
+    .timeline-card .arrow {
+        display: none;
+    }
+    
+    .experience {
+        padding: clamp(2rem, 8vw, 4rem) clamp(1rem, 5vw, 2rem);
     }
 }
 
@@ -411,7 +472,6 @@ footer {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -425,7 +485,7 @@ section {
 .experience {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding: clamp(2rem, 8vw, 4rem) clamp(1rem, 5vw, 2rem);
 }
 
 .timeline {
@@ -449,13 +509,13 @@ section {
 
 .timeline-container {
     position: relative;
-    padding: 2rem 0;
+    padding: clamp(1.5rem, 4vw, 2rem) 0;
 }
 
 .timeline-item {
     position: relative;
     width: 50%;
-    padding: 1rem 2rem;
+    padding: clamp(1rem, 3vw, 1rem) clamp(1.5rem, 4vw, 2rem);
 }
 
 .timeline-item.left {
@@ -468,11 +528,11 @@ section {
 
 .timeline-icon {
     position: absolute;
-    top: 20px;
+    top: clamp(15px, 3vw, 20px);
     left: 50%;
     transform: translateX(-50%);
-    width: 70px;
-    height: 70px;
+    width: clamp(60px, 12vw, 70px);
+    height: clamp(60px, 12vw, 70px);
     background: var(--bg-secondary);
     border: 4px solid #667eea;
     border-radius: 50%;
@@ -484,9 +544,9 @@ section {
 }
 
 .company-logo {
-    width: 45px !important;
+    width: clamp(35px, 8vw, 45px) !important;
     height: auto !important;
-    max-height: 45px !important;
+    max-height: clamp(35px, 8vw, 45px) !important;
     object-fit: contain;
 }
 
@@ -495,8 +555,8 @@ section {
     background: var(--bg-secondary);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    padding: 1.5rem 2rem;
-    margin: 0 1rem;
+    padding: clamp(1.2rem, 3vw, 1.5rem) clamp(1.5rem, 4vw, 2rem);
+    margin: 0 clamp(0.5rem, 2vw, 1rem);
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
@@ -516,7 +576,7 @@ section {
 }
 
 .timeline-card h3 {
-    font-size: 1.4rem;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
     font-weight: 700;
     color: var(--text-primary);
     margin: 0 0 0.5rem 0;
@@ -525,7 +585,7 @@ section {
 .timeline-card .date {
     color: var(--text-secondary);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 2vw, 0.95rem);
 }
 
 .timeline-card .current-date {
@@ -571,33 +631,6 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-}
-
-@media (max-width: 768px) {
-    .timeline::before {
-        left: 25px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 60px;
-        padding-right: 0;
-    }
-
-    .timeline-item.right {
-        left: 0;
-    }
-
-    .timeline-icon {
-        left: 25px;
-    }
-
-    .timeline-item.right .timeline-card .arrow {
-        right: auto;
-        left: -15px;
-        border-left: none;
-        border-right: 15px solid var(--bg-secondary);
-    }
 }
 
 .timeline-icon.sticker-bg {

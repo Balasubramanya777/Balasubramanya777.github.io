@@ -40,7 +40,7 @@ body.dataset.theme = savedTheme;
 themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
 // Form Handling
-document.getElementById('contact-form').addEventListener('submit', (e) => {
+document.getElementById('contact-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Message sent! (Demo - integrate with EmailJS/Netlify later)');
     e.target.reset();
