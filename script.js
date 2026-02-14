@@ -65,3 +65,33 @@ document.querySelectorAll('.experience-item[data-url]').forEach(item => {
         }
     });
 });
+
+
+// Initialize EmailJS
+(function () {
+    emailjs.init("cy82hGO3Fril0M_qO");
+})();
+
+// Handle form submission
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Set time for email template
+    document.getElementById('time').value =
+        new Date().toLocaleString();
+
+    emailjs.sendForm(
+        'service_0bw6oyl',
+        'template_dnwqcfs',
+        this
+    ).then(
+        function () {
+            alert('Message sent successfully!');
+            document.getElementById('contact-form').reset();
+        },
+        function (error) {
+            console.error(error);
+            alert('Failed to send message');
+        }
+    );
+});

@@ -55,6 +55,7 @@
     <section id="experience" class="experience">
         <h2 class="section-title">Experience</h2>
         <div class="experience-container">
+
             <div class="experience-item" data-url="https://prodatit.com/">
                 <div class="experience-content">
                     <h3 class="company-name">Prodat</h3>
@@ -65,8 +66,8 @@
                 </div>
             </div>
 
-            <div class="experience-item">
-                <div class="experience-content" data-url="https://in.linkedin.com/company/esyasoft">
+            <div class="experience-item" data-url="https://in.linkedin.com/company/esyasoft">
+                <div class="experience-content">
                     <h3 class="company-name">Esyasoft</h3>
                     <p class="company-period">Feb 2025 - Present</p>
                 </div>
@@ -74,6 +75,7 @@
                     <img src="assets/company/Esyasoft.jpg" alt="Esyasoft">
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -193,11 +195,9 @@
             </a>
         </div>
 
-        <form action="https://formspree.io/f/maqdoynz" method="POST" class="contact-form">
-            <input type="hidden" name="_subject" value="New Portfolio Message from N. Balasubramanya">
-            <input type="hidden" name="_replyto" value="%email%">
-            <input type="text" name="_gotcha" style="display:none">
-
+        <form id="contact-form" class="contact-form">
+            <input type="hidden" name="time" id="time">
+            
             <div class="form-group">
                 <input type="text" name="name" placeholder="Your Name *" required>
             </div>
