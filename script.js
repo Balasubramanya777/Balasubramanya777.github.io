@@ -55,3 +55,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 document.querySelectorAll('section').forEach(el => observer.observe(el));
+
+// Experience item click handler
+document.querySelectorAll('.experience-item[data-url]').forEach(item => {
+    item.addEventListener('click', function () {
+        const url = this.dataset.url;
+        if (url) {
+            window.open(url, '_blank');
+        }
+    });
+});
