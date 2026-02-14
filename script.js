@@ -39,13 +39,6 @@ const savedTheme = localStorage.getItem('theme') || 'light';
 body.dataset.theme = savedTheme;
 themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
-// Form Handling
-document.getElementById('contact-form')?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Message sent! (Demo - integrate with EmailJS/Netlify later)');
-    e.target.reset();
-});
-
 // Intersection Observer for Animations
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
