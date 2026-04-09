@@ -185,6 +185,18 @@ body {
     white-space: nowrap;
 }
 
+/* Light mode defaults */
+.btn.btn-secondary:hover {
+  background-color: #ffffff;
+  color: #000000; /* Black text on hover */
+}
+
+/* Dark mode override - higher specificity */
+[data-theme="dark"] .btn.btn-secondary:hover {
+  background-color: #ffffff;
+  color: #000000 !important; /* Ensures black text; use sparingly */
+}
+
 .btn-primary {
     background: var(--bg-secondary);
     color: var(--text-primary);
