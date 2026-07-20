@@ -1,0 +1,202 @@
+%-------------------------
+% Resume in Latex
+% Author: Balasubramanya
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-6pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape Balasubramanya N} \\ \vspace{4pt}
+  {\Large \scshape Software Engineer} \\ \vspace{4pt}
+  \small
+  \faPhone\ +91 98868 50516 \quad \textperiodcentered \quad
+  \href{mailto:nbalun1224@gmail.com}{\faEnvelope\ nbalun1224@gmail.com} \quad \textperiodcentered \quad
+  \href{https://balasubramanya777.github.io/}{\faGlobe\ Portfolio} \quad \textperiodcentered \quad
+  \href{https://github.com/Balasubramanya777}{\faGithub\ GitHub} \quad \textperiodcentered \quad
+  \href{https://www.linkedin.com/in/balasubramanya-n/}{\faLinkedin\ LinkedIn}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Backend-focused Full Stack Developer with experience building scalable systems in utilities and healthcare domains using .NET, Spring Boot, and Angular. Skilled in designing distributed backend services, billing workflows, and microservices with complex business logic. Experienced in system design, API design, and secure authentication and authorization (RBAC, MFA), with a strong focus on performance, data consistency, and production-grade reliability.}
+\vspace{4pt}
+
+%-----------Experience-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Esyasoft}{Feb 2025 -- Present}
+    {Software Engineer}{Tech Stack: .NET, React, Entity Framework Core, PostgreSQL}
+    \resumeItemListStart
+      \resumeItem{Designed and developed a scalable revenue management platform for electricity, water, and gas utilities, supporting end-to-end workflows from consumer onboarding to billing and payment processing.}
+      \resumeItem{Built high-throughput billing pipelines to process and generate bills for lakhs of consumers, including bulk ingestion of meter readings via CSV and automated monthly billing cycles.}
+      \resumeItem{Engineered backend services to handle complex business logic involving tariffs, taxation, advance payments, rebates, and due calculations while ensuring data consistency and accuracy.}
+      \resumeItem{Optimized data processing for large-scale workloads, enabling efficient handling of high-volume transactions with minimal performance degradation.}
+      \resumeItem{Improved system flexibility by leveraging Entity Framework to support multiple client databases without requiring code changes.}
+      \resumeItem{Developed multilingual support and modular architecture to enable adaptability across different regions and clients.}
+    \resumeItemListEnd
+
+  \vspace{4pt}
+
+  \resumeSubheading
+    {Prodat IT Solutions}{Feb 2023 -- Feb 2025}
+    {Software Associate}{Tech Stack: Spring Boot, Angular, Hibernate, PostgreSQL}
+    \resumeItemListStart
+      \resumeItem{Designed and developed a microservices-based healthcare platform encompassing modules for patient management, claims processing, insurance handling, and appointment scheduling.}
+      \resumeItem{Integrated OCR-based automation pipelines leveraging Azure and AWS cloud services to streamline document processing and reduce manual data entry.}
+      \resumeItem{Ensured full compliance with HIPAA regulations, standards, and best practices to maintain data privacy and security across all healthcare modules.}
+      \resumeItem{Optimized database queries and backend logic to enhance system performance, reliability, and response times under high-load conditions.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.0in, label={}]
+  \small{\item{
+    \textbf{Languages}{: C\#, Java, JavaScript, TypeScript} \\[4pt]
+    \textbf{Frontend}{: Angular, React, HTML, CSS, Bootstrap, Angular Material} \\[4pt]
+    \textbf{Backend \& Frameworks}{: .NET, Spring Boot, WebSocket, Hibernate, Entity Framework Core} \\[4pt]
+    \textbf{Databases}{: PostgreSQL, MySQL} \\[4pt]
+    \textbf{Cloud \& DevOps}{: Azure, AWS, Docker, Git, Azure DevOps} \\[4pt]
+    \textbf{Microsoft Power Platform}{: Power Apps, Power Pages, Power Automate, Dataverse} \\[4pt]
+    \textbf{Tools}{: Jira, Postman}
+  }}
+\end{itemize}
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Real-Time Collaborative Document Editor} \href{https://github.com/Balasubramanya777/document-me}{\small\faGithub}}{}
+  \vspace{-14pt}
+  \resumeItemListStart
+    \resumeItem{\textbf{Tech Stack:} Angular, ASP.NET Core, Yjs, PostgreSQL, WebSocket}
+    \resumeItem{Implemented CRDT-based conflict resolution using Yjs and Hocuspocus WebSocket server to ensure consistent document state across all connected clients.}
+    \resumeItem{Secured the platform using JWT authentication with HttpOnly cookies, middleware-protected REST APIs, and WebSocket-level connection validation.}
+  \resumeItemListEnd
+
+  \vspace{4pt}
+
+  \resumeProjectHeading
+    {\textbf{Role-Based Access Control (RBAC) System} \href{https://github.com/Balasubramanya777/am-i-authorised}{\small\faGithub}}{}
+  \vspace{-14pt}
+  \resumeItemListStart
+    \resumeItem{\textbf{Tech Stack:} Angular, ASP.NET Core, PostgreSQL, Bootstrap, Angular Material}
+    \resumeItem{Built a full-stack RBAC application enforcing fine-grained, backend-driven authorization across pages, menus, buttons, and actions based on user roles and permissions.}
+    \resumeItem{Designed a JWT-based auth system embedding both role and permission claims, ensuring every API request is validated server-side before processing.}
+    \resumeItem{Implemented four distinct roles — Admin, Auditor, Employee, and Manager — each with specific, declarative permissions extensible for future requirements.}
+  \resumeItemListEnd
+
+  \vspace{4pt}
+
+  \resumeProjectHeading
+    {\textbf{Multi-Factor Authentication (MFA) System} \href{https://github.com/Balasubramanya777/mfa}{\small\faGithub}}{}
+  \vspace{-14pt}
+  \resumeItemListStart
+    \resumeItem{\textbf{Tech Stack:} Spring Boot, Thymeleaf, PostgreSQL, Spring Security, HTTP Session}
+    \resumeItem{Built a two-step MFA system using Spring Boot and Spring Security, enforcing both password and TOTP verification before granting access.}
+    \resumeItem{Integrated QR code-based TOTP setup using the \texttt{dev.samstevens.totp} library, compatible with standard authenticator apps like Google Authenticator.}
+    \resumeItem{Leveraged Spring Security's built-in MFA support over custom filter logic, resulting in a cleaner, maintainable, and more secure implementation.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Jain (Deemed-to-be University)}{Bangalore, India}
+    {Master of Computer Applications -- Computer Science}{Jan 2028}
+
+\resumeSubHeadingListEnd
+
+%-----------Certifications-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Java Course – Mastering the Fundamentals} $|$ \emph{Scaler}}{}
+  \vspace{-25pt}
+
+  \resumeProjectHeading
+    {\textbf{Foundational C\# with Microsoft} $|$ \emph{freeCodeCamp $\times$ Microsoft}}{}
+  \vspace{-25pt}
+
+  \resumeProjectHeading
+    {\textbf{Angular Foundations Course} $|$ \emph{Scholar Hat}}{}
+    \vspace{-25pt}
+
+\resumeSubHeadingListEnd
+
+
+
+\end{document}
