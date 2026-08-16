@@ -1,0 +1,210 @@
+%-------------------------
+% Resume in Latex
+% Author: Balasubramanya
+%------------------------
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.4in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+
+% ---- EXPERIENCE commands ----
+\newcommand{\experienceListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\experienceListEnd}{\end{itemize}}
+\newcommand{\experienceEntry}[4]{
+  \item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}
+}
+\newcommand{\experienceItemListStart}{\begin{itemize}[label=\textbullet]}
+\newcommand{\experienceItemListEnd}{\end{itemize}}
+\newcommand{\experienceItem}[1]{\item \small{#1}}
+
+% ---- SKILLS commands ----
+\newcommand{\skillsListStart}{\begin{itemize}[leftmargin=0.0in, label={}]\small\item}
+\newcommand{\skillsListEnd}{\end{itemize}}
+\newcommand{\skillLine}[2]{\textbf{#1}{: #2} \\[3pt]}
+
+% ---- PROJECTS commands ----
+\newcommand{\projectListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\projectListEnd}{\end{itemize}}
+
+\newcommand{\projectEntry}[2]{
+  \item[]
+    \vspace{-4pt}
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & \textbf{\small #2}\\
+    \end{tabular*}
+}
+\newcommand{\projectItemListStart}{\begin{itemize}[label=\textbullet]}
+\newcommand{\projectItemListEnd}{\end{itemize}}
+\newcommand{\projectItem}[1]{\item \small{#1}}
+
+% ---- EDUCATION commands ----
+\newcommand{\educationListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\educationListEnd}{\end{itemize}}
+
+\newcommand{\educationEntry}[4]{
+  \item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}
+}
+
+% ---- CERTIFICATIONS commands ----
+\newcommand{\certificationListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\certificationListEnd}{\end{itemize}}
+
+\newcommand{\certificationEntry}[2]{
+  \item
+  \small{\textbf{#1} \textbar{} \textit{#2}}
+}
+
+
+
+
+\begin{document}
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape Balasubramanya N} \\ \vspace{3pt}
+  \small
+  \faPhone\ +91 98868 50516 \quad \textperiodcentered \quad
+  \href{mailto:nbalun1224@gmail.com}{\faEnvelope\ nbalun1224@gmail.com} \quad \textperiodcentered \quad
+  \href{https://balasubramanya777.github.io/}{\faGlobe\ Portfolio} \quad \textperiodcentered \quad
+  \href{https://github.com/Balasubramanya777}{\faGithub\ GitHub} \quad \textperiodcentered \quad
+  \href{https://www.linkedin.com/in/balasubramanya-n/}{\faLinkedin\ LinkedIn}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Full Stack Developer with 3+ years of experience building enterprise applications using .NET, Angular, and SQL. Skilled in backend development, REST API design, and database optimization. Passionate about writing scalable, maintainable code and improving development processes.}
+\vspace{2pt}
+
+%-----------Experience-----------
+\section{Experience}
+\experienceListStart
+
+  \experienceEntry
+    {Esyasoft}{Feb 2025 -- Present}
+    {Software Engineer - Full Stack}{Tech Stack: ASP.NET Core, React, Entity Framework Core, PostgreSQL}
+    \experienceItemListStart
+      \experienceItem{Developed features for an enterprise Revenue Management System serving electricity, water, and gas utilities.}
+      \experienceItem{Wrote performance-critical raw SQL queries to optimize data retrieval and reporting beyond ORM capabilities.}
+      \experienceItem{Built bulk data import and processing pipelines to handle large volumes of consumer and billing data.}
+      \experienceItem{Developed background services for asynchronous processing and scheduled business operations.}
+    \experienceItemListEnd
+
+  \experienceEntry
+    {Prodat IT Solutions}{Feb 2023 -- Feb 2025}
+    {Software Associate - Full Stack}{Tech Stack: Spring Boot, Angular, Hibernate, PostgreSQL}
+    \experienceItemListStart
+      \experienceItem{Integrated Amazon Textract and Azure OCR to automate data extraction from PDF documents.}
+      \experienceItem{Built backend integrations with QuickBooks and Xero APIs for secure financial data sync.}
+      \experienceItem{Developed reporting modules to generate Balance Sheets, P\&L Statements, and Reconciliation Statements.}
+    \experienceItemListEnd
+    
+\experienceListEnd
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\skillsListStart
+  \skillLine{Languages}{C\#, Java, JavaScript, TypeScript}
+  \skillLine{Frontend}{Angular, React, HTML, CSS, Bootstrap, Angular Material}
+  \skillLine{Backend \& Frameworks}{.NET, Spring Boot, WebSocket, Hibernate, Entity Framework Core}
+  \skillLine{Databases}{PostgreSQL, MySQL}
+  \skillLine{Cloud \& DevOps}{Azure, AWS, Docker, Git, Azure DevOps}
+  \skillLine{Microsoft Power Platform}{Power Apps, Power Pages, Power Automate, Dataverse}
+  \skillLine{Tools}{Jira, Postman}
+\skillsListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\projectListStart
+
+  \projectEntry
+    {\textbf{Real-Time Collaborative Document Editor} \href{https://github.com/Balasubramanya777/document-me}{\small\faGithub}}
+    {\normalfont\itshape -- ASP.NET Core, Angular, Yjs, PostgreSQL, WebSocket}
+    \projectItemListStart
+      \projectItem{Built CRDT-based real-time collaboration with low-latency sync across multiple concurrent users.}
+      \projectItem{Added live cursor tracking and user presence indicators, improving visibility into concurrent edits across collaborators.}
+    \projectItemListEnd
+
+  \projectEntry
+    {\textbf{Role-Based Access Control (RBAC) System} \href{https://github.com/Balasubramanya777/am-i-authorised}{\small\faGithub}}
+    {\normalfont\itshape -- ASP.NET Core, Angular, PostgreSQL}
+    \projectItemListStart
+      \projectItem{Built full-stack RBAC enforcing fine-grained, backend-driven authorization across pages, menus, and actions.}
+      \projectItem{Designed configurable role and permission modules, enabling admins to manage access without code changes.}
+    \projectItemListEnd
+
+  \projectEntry
+    {\textbf{Multi-Factor Authentication (MFA) System} \href{https://github.com/Balasubramanya777/mfa}{\small\faGithub}}
+    {\normalfont\itshape -- Spring Boot, Thymeleaf, PostgreSQL}
+    \projectItemListStart
+      \projectItem{Implemented TOTP-based MFA with QR code provisioning for secure two-step login.}
+      \projectItem{Leveraged Spring Security's built-in support to enforce two-step authentication without custom filters.}
+    \projectItemListEnd
+
+\projectListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\educationListStart
+
+\educationEntry
+{Jain (Deemed-to-be University)}{Bangalore, India}
+{Master of Computer Applications -- Computer Science}{Expected Jan 2028}
+
+\educationListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\certificationListStart
+
+\certificationEntry
+{Java Course -- Mastering the Fundamentals}
+{Scaler}
+
+\certificationEntry
+{Foundational C\# with Microsoft}
+{freeCodeCamp $\times$ Microsoft}
+
+\certificationEntry
+{Angular Foundations Course}
+{Scholar Hat}
+
+\certificationListEnd
+
+\end{document}
